@@ -4,7 +4,7 @@ from typing import Dict, List, Tuple
 
 from wrapt import ObjectProxy
 
-from ..nbrain import Area, BrainPart, Stimulus
+from ..components import Area, BrainPart, Stimulus
 from .connectome import Connectome
 
 

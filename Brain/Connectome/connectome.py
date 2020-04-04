@@ -6,7 +6,7 @@ from typing import Dict, List, Tuple
 
 from wrapt import ObjectProxy  # Needed to pip install
 
-from ..nbrain import BrainPart, Area, Stimulus
+from ..components import BrainPart, Area, Stimulus
 
 
 # The wrapt library implements easy to use wrapper objects, which delegates everything to the object you are
