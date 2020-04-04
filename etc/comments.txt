@@ -4,10 +4,7 @@
 *python setup.py sdist - create source distribution of the project. After that, a tar.gz file will be located in dist/, and this file can be installed by pip. 
 
 #TODO: 
-readme.md (how to install (install.sh), how to use - quickstart, how to run tests...)
-__init__.py
-sphinx?
-
+readme (how to run tests...)
 
 
 account for github:
