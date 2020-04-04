@@ -1,1 +1,1 @@
-from .brain import Brain
+from .brain import Area, Assembly, Brain, Stimulus
