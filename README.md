@@ -55,7 +55,7 @@ The `Brain` packages provides the following classes:
     >>> connectome.add_area(area)
     ```
 
-- `Brian`
+- `Brain`
 
     This class represents a simulated brain, with it's connectome which holds the areas, stimuli, and all the synapse weights.
 
