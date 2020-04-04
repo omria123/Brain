@@ -10,7 +10,7 @@ sphinx?
 
 
 
-account for travis and codecov:
+account for github:
 BrainProjectTau@gmail.com
 password: brain1234!
 
