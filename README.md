@@ -46,22 +46,41 @@ The `Brain` packages provides the following classes:
     
 - `Connectome`
     
-    Represent the graph of connections between areas and stimuli of the brain.
+    Sub-package which holds the structre of the brain.
+    The sub-package defines the following classes:
     
-    ```pycon
-    >>> from Brain import Connectome, Area
-    >>> connectome = Connectome()
-    >>> area = Area(beta = 0.1, n = 10 ** 7, k = 10 ** 4)
-    >>> connectome.add_area(area)
-    ```
-
+    - `Connectome`
+        Abstract class which defines the API which a general connectome should have.
+        This class should be inhereted and implemented.
+        
+        ```pycon
+        >>> from Connectome import Connectome
+        >>> class LazyConnectome(Connectome):
+        >>>     #implementation of a specific connectome
+        >>>> connectome = LazyConnectome()
+        >>> area = Area(beta = 0.1, n = 10 ** 7, k = 10 ** 4)
+        >>> connectome.add_area(area)
+        ```
+    - `NonLazyRandomConnectome` 
+        Already implemented Connectome which by decides it's edge by chance.
+        This Connectome doesn't use any kind of laziness.
+       
+       ```pycon
+        >>> from Connectome import NonLazyRandomConnectome
+        >>>> connectome = NonLazyRandomConnectome()
+        >>> area = Area(beta = 0.1, n = 10 ** 7, k = 10 ** 4)
+        >>> connectome.add_area(area)
+        ```
+    - `To be continued`
+        More ways to implement a connectome can be applied simply by inhereting from Connectome and implementing it's API.
+    
 - `Brain`
 
     This class represents a simulated brain, with it's connectome which holds the areas, stimuli, and all the synapse weights.
 
     ```pycon
-    >>> from Brain import Brain, Connectome, Area
-    >>> connectome = Connectome()
+    >>> from Brain import Brain, NonLazyRandomConnectome, Area
+    >>> connectome = NonLazyRandomConnectome()
     >>> area = Area(beta = 0.1, n = 10 ** 7, k = 10 ** 4)
     >>> connectome.add_area(area)
     >>> brain = Brain(connectome)
