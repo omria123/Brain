@@ -11,6 +11,16 @@ from ..components import BrainPart, Area, Stimulus
 
 # The wrapt library implements easy to use wrapper objects, which delegates everything to the object you are
 # using. It's very convenient to use (it can be used exactly in the same way).
+# To change the reference of the ObjectProxy one should set the attribute __wrapped__
+# Example:
+#
+# a = ObjectProxy(1)
+# print(id(a)) #prints 12345 
+# print(a) #prints 1
+# a.__wrapped__ = 2
+# print(id(a)) #prints 12345 
+# print(a) #prints 2
+# print(isinstance(a, int)) #prints True
 # More info and examples:
 # https://wrapt.readthedocs.io/en/latest/wrappers.html
 
